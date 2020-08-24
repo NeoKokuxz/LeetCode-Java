@@ -1,20 +1,6 @@
 import java.util.HashMap;
 
 public class TwoSum {
-
-    public static void main(String[] args) {
-
-        int target = 6;
-        int[] nums = new int[] {3,2,4};
-
-        int[] newNums = twoSum(nums, target);
-
-        System.out.println("Printing");
-        for(int i : newNums){
-            System.out.print(i + " ");
-        }
-    }
-
     public static int[] twoSum(int[] nums, int target) {
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
