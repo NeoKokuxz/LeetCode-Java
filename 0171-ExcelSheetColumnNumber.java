@@ -11,6 +11,7 @@ class Solution {
             // result = 0*26 + 1 = 1
             // Second A:
             // A - A + 1 = 1
+            // Each Loop with increase result and that will be * 26
             // result = result(1) * 26 + 1 = 27
             // So 27 = AA
             result = result*26 + i;
