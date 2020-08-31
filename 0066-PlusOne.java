@@ -1,3 +1,4 @@
+//100%
 class Solution {
     public int[] plusOne(int[] digits) {
         
@@ -33,6 +34,8 @@ class Solution {
         
     }
 }
+
+//17%
 class Solution {
     public int[] plusOne(int[] digits) {
 
