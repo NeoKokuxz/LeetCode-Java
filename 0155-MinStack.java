@@ -5,7 +5,7 @@ class MinStack {
     Stack<Integer> minStack = new Stack<>(); //Only push element is smaller than current min
 
     public void push(int x) {
-        //If min stack is empty orj current element less than the top of the min stack
+        //If min stack is empty or current element less than the top of the min stack
         if(minStack.isEmpty() || x <= minStack.peek()){
             //Push the element to min stack
             minStack.push(x);
