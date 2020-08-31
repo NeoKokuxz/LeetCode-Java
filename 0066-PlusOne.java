@@ -33,3 +33,38 @@ class Solution {
         
     }
 }
+class Solution {
+    public int[] plusOne(int[] digits) {
+
+            // initial set curry to 1
+            int carry = 1;
+            //Going backward
+            for (int i = digits.length - 1; i >= 0; i--) {
+                //Check current num + 1
+                int tmp = digits[i] + carry;
+                //If current num >= 10
+                if (tmp >= 10) {
+                    //carry the 1 to the new array down bottom
+                    carry = 1;
+                    //set current to % 10 = 0
+                    digits[i] = tmp % 10;
+                } else {
+                    //No carry just add the 1 to current
+                    carry = 0;
+                    digits[i] = tmp;
+                }
+            }
+            // if we have input like [9,9,9] then we will have curry = 1
+            // so in this case we have an or of length len(digits) + 1
+            // first digits is 1 and rest copy from digits to newDigits array
+            if (carry != 0) {
+                int[] newDigits = new int[digits.length+1];
+                newDigits[0] = 1;
+                for (int i = 1; i < newDigits.length; i++) {
+                    newDigits[i] = digits[i-1];
+                }
+                return newDigits;
+            }
+            return digits;
+    }
+}
